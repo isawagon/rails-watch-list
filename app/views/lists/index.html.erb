@@ -1,0 +1,15 @@
+
+<div class="navbar ">
+  <div class="container-fluid">
+
+    <p>LISTS</p>
+    <%= link_to "Add a list", "lists/new", class: "nav-link btn btn-outline-primary" %>
+  </div>
+</div>
+
+<div class='container'>
+  <h1>All the lists (<%= @lists.count  %>)</h1>
+  <%= @lists.each do |list| %>
+    <h2> list.name</h2>
+    <% end %>
+</div>
