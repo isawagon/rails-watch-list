@@ -1,0 +1,14 @@
+<div class="navbar ">
+  <div class="container-fluid">
+
+    <p>ADD A NEW BOOKMARK</p>
+    <%= link_to "Back to Bookmarks", "bookmarks", class: "nav-link btn btn-outline-primary" %>
+  </div>
+</div>
+
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie, collection: Movie.all, prompt: "Choose a Movie" %>
+  <%= f.association :list %>
+  <%= f.button :submit %>
+<% end %>
